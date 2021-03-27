@@ -1,6 +1,9 @@
-class Obwod(val typ: Typ, val oporPodstawowy:Double = 0.0) {
+class Obwod(var typ: Typ, var oporPodstawowy: Double = 0.0) {
     enum class Typ {
         SZEREGOWY, ROWNOLEGLY
+    }
+
+    constructor(opor: Double) : this(Typ.SZEREGOWY, opor) {
     }
 
     val obwody: MutableList<Obwod> = mutableListOf()
@@ -32,7 +35,7 @@ class Obwod(val typ: Typ, val oporPodstawowy:Double = 0.0) {
     }
 
     fun obliczRownolegly(): Double {
-        var sumaOdwrotnosci = 1/oporPodstawowy
+        var sumaOdwrotnosci = 1 / oporPodstawowy
 
         for (obwod in obwody)
             sumaOdwrotnosci += 1.0 / obwod.oblicz()
