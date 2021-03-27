@@ -1,17 +1,18 @@
 class Obwod(val typ: Typ, val R1: Double, val R2: Double) {
-    enum class Typ{
+    enum class Typ {
         SZEREGOWY, ROWNOLEGLY
     }
 
-    fun print(){
+    fun print() {
         println("obwód: ${typ.name}")
+        println("opór zastępczy: ${oblicz()}")
     }
 
-    fun oblicz():Double{
+    fun oblicz(): Double {
         return obliczSzeregowy()
     }
 
-    fun obliczSzeregowy():Double{
-        return 0.0
+    fun obliczSzeregowy(): Double {
+        return R1 + R2
     }
 }
