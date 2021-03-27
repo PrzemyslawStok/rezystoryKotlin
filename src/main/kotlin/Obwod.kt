@@ -1,17 +1,12 @@
-class Obwod(val typ: Typ) {
+class Obwod(val typ: Typ, val oporPodstawowy:Double = 0.0) {
     enum class Typ {
         SZEREGOWY, ROWNOLEGLY
     }
 
     val obwody: MutableList<Obwod> = mutableListOf()
-    var oporPodstawowy = 0.0
 
     fun dodajObwod(obwod: Obwod) {
         obwody.add(obwod)
-    }
-
-    fun dodajObwod(opor: Double){
-        oporPodstawowy = opor
     }
 
     fun print() {
