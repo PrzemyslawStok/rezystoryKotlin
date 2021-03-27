@@ -19,4 +19,8 @@ class Obwod(val typ: Typ, val R1: Double, val R2: Double) {
     fun obliczSzeregowy(): Double {
         return R1 + R2
     }
+
+    fun obliczRownolegly(): Double {
+        return 0.0
+    }
 }
