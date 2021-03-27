@@ -1,6 +1,12 @@
-class Obwod(val typ: Typ, val R1: Double, val R2: Double) {
+class Obwod(val typ: Typ) {
     enum class Typ {
         SZEREGOWY, ROWNOLEGLY
+    }
+
+    val opory: MutableList<Double> = mutableListOf()
+
+    fun dodajOpor(opor: Double) {
+        opory.add(opor)
     }
 
     fun print() {
@@ -17,11 +23,16 @@ class Obwod(val typ: Typ, val R1: Double, val R2: Double) {
     }
 
     fun obliczSzeregowy(): Double {
-        return R1 + R2
+        var sumaOporow = 0.0
+
+        for(opor in opory)
+            sumaOporow+=opor
+
+        return sumaOporow
     }
 
     fun obliczRownolegly(): Double {
-        val sumaOdwrotnosci = 1 / R1 + 1 / R2
+        val sumaOdwrotnosci = 1.0
         return 1 / sumaOdwrotnosci
     }
 }
