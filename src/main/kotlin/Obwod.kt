@@ -9,7 +9,11 @@ class Obwod(val typ: Typ, val R1: Double, val R2: Double) {
     }
 
     fun oblicz(): Double {
-        return obliczSzeregowy()
+        val opor = when (typ) {
+            Typ.SZEREGOWY -> obliczSzeregowy()
+            Typ.ROWNOLEGLY -> 0.0
+        }
+        return opor
     }
 
     fun obliczSzeregowy(): Double {
