@@ -1,4 +1,4 @@
 fun main() {
-    val obwod1 = Obwod(Obwod.Typ.SZEREGOWY, 2.0, 5.0)
+    val obwod1 = Obwod(Obwod.Typ.ROWNOLEGLY, 1.0, 1.0)
     obwod1.print()
 }

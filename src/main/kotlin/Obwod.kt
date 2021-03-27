@@ -11,7 +11,7 @@ class Obwod(val typ: Typ, val R1: Double, val R2: Double) {
     fun oblicz(): Double {
         val opor = when (typ) {
             Typ.SZEREGOWY -> obliczSzeregowy()
-            Typ.ROWNOLEGLY -> 0.0
+            Typ.ROWNOLEGLY -> obliczRownolegly()
         }
         return opor
     }
@@ -21,6 +21,7 @@ class Obwod(val typ: Typ, val R1: Double, val R2: Double) {
     }
 
     fun obliczRownolegly(): Double {
-        return 0.0
+        val sumaOdwrotnosci = 1 / R1 + 1 / R2
+        return 1 / sumaOdwrotnosci
     }
 }
