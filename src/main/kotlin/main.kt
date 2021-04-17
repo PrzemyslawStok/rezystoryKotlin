@@ -17,9 +17,16 @@ fun main() {
 
     obwod1.print()
 
-    val rezystor0 = Rezystor(10.0)
-    rezystor0.print()
+    val R0 = Rezystor(1.0)
+    R0.print()
 
+    val R1 = Rezystor(1.0)
+    R1.print()
 
-    //obwod2.print()
+    val obwodR1 = ObwodOgolny(ObwodRezystory.Typ.ROWNOLEGLY)
+    obwodR1.dodajObwod(R0)
+    obwodR1.dodajObwod(R1)
+
+    obwodR1.print()
+
 }
