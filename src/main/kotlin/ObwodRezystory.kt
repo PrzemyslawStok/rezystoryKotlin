@@ -65,7 +65,12 @@ class ObwodSzeregowy: ObwodRezystory{
     }
 
     override fun oblicz(): Double {
-        TODO("Not yet implemented")
+        var sumaOporow = 0.0
+
+        for (obwod in obwody)
+            sumaOporow += obwod.oblicz()
+
+        return sumaOporow
     }
 
     override fun print() {
