@@ -57,3 +57,21 @@ class ObwodOgolny(val typ: ObwodRezystory.Typ) : ObwodRezystory {
     }
 }
 
+class ObwodSzeregowy: ObwodRezystory{
+    val obwody: MutableList<ObwodRezystory> = mutableListOf()
+
+    fun dodajObwod(obwod: ObwodRezystory) {
+        obwody.add(obwod)
+    }
+
+    override fun oblicz(): Double {
+        TODO("Not yet implemented")
+    }
+
+    override fun print() {
+        println("obwód: Szeregowy}")
+        println("opór zastępczy: ${oblicz()}")
+    }
+
+}
+
