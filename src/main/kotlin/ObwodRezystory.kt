@@ -87,7 +87,12 @@ class ObwodRownolegly: ObwodRezystory{
     }
 
     override fun oblicz(): Double {
-        TODO("Funkcja jeszcze nie została zaimplementowana")
+        var sumaOdwrotnosci = 0.0
+
+        for (obwod in obwody)
+            sumaOdwrotnosci += 1.0 / obwod.oblicz()
+
+        return 1 / sumaOdwrotnosci
     }
 
     override fun print() {
