@@ -17,6 +17,8 @@ fun main() {
 
     obwod1.print()
 
+    val rezystor0 = Rezystor(10.0)
+    rezystor0.print()
 
 
     //obwod2.print()
