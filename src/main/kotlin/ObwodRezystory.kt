@@ -13,7 +13,16 @@ class Rezystor(val opor: Double) : ObwodRezystory {
     }
 
     override fun print() {
-        print("opor wynosi: ${opor}")
+        println("opor wynosi: ${opor}")
+    }
+
+    fun dodajSzeregowo(R0: ObwodRezystory):Rezystor{
+
+        val obwod = ObwodSzeregowy()
+        obwod.dodajObwod(this)
+        obwod.dodajObwod(R0)
+
+        return Rezystor(obwod.oblicz())
     }
 
 }

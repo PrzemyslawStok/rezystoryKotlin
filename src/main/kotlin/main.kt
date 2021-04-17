@@ -22,6 +22,10 @@ fun main() {
 
     obwodS1.print()
 
+    R1.print()
+    val R2 = R1.dodajSzeregowo(Rezystor(5.0))
+    R2.print()
+
 }
 
 fun staryObwod(){
