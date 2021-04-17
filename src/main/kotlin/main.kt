@@ -22,9 +22,13 @@ fun main() {
 
     obwodS1.print()
 
+    val R2 = R1.dodajSzeregowo(Rezystor(10.0))
+    val R3 = R2-R1
+
     R1.print()
-    val R2 = R1.dodajSzeregowo(Rezystor(5.0))
     R2.print()
+    R3.print()
+
 
 }
 

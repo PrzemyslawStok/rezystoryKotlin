@@ -25,6 +25,10 @@ class Rezystor(val opor: Double) : ObwodRezystory {
         return Rezystor(obwod.oblicz())
     }
 
+    operator fun minus(R0: ObwodRezystory):ObwodRezystory{
+        return dodajSzeregowo(R0)
+    }
+
 }
 
 class ObwodOgolny(val typ: ObwodRezystory.Typ) : ObwodRezystory {
