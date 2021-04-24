@@ -30,6 +30,13 @@ fun main() {
     R1.print()
     R2.print()
     R3.print()
+
+    println("Zadanie 1")
+    zad1()
+}
+
+fun zad1(){
+    val R = Rezystor(1.0)
 }
 
 fun staryObwod(){
