@@ -22,7 +22,11 @@ class Rezystor(val opor: Double) : ObwodRezystory {
     }
 
     fun dodajRownolegle(R0: ObwodRezystory):Rezystor{
-        TODO("Funkcja nie została zaimpementowana")
+        val obwod = ObwodRownolegly()
+        obwod.dodajObwod(this)
+        obwod.dodajObwod(R0)
+
+        return Rezystor(obwod.oblicz())
     }
 
     operator fun minus(R0: ObwodRezystory):Rezystor{

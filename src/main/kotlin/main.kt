@@ -5,6 +5,7 @@ fun main() {
     val R1 = Rezystor(1.0)
     R1.print()
 
+
     val obwodR1 = ObwodRownolegly()
 
     obwodR1.dodajObwod(R0)
@@ -15,7 +16,7 @@ fun main() {
     val obwodS1 = ObwodSzeregowy()
     obwodS1.dodajObwod(R1)
     obwodS1.dodajObwod(obwodR1)
-
+    
       //       --R0--
       //    --|     |--R1--
       //      --R1--
@@ -24,13 +25,11 @@ fun main() {
 
     val R2 = R1.dodajSzeregowo(Rezystor(10.0))
     val R3 = R1-R2-R1-R2-R1
-    var R5 = R1/R2
+    var R5 = (R0/R1)-R1
 
     R1.print()
     R2.print()
     R3.print()
-
-
 }
 
 fun staryObwod(){
