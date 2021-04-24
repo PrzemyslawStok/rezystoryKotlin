@@ -28,6 +28,10 @@ class Rezystor(val opor: Double) : ObwodRezystory {
     operator fun minus(R0: ObwodRezystory):Rezystor{
         return dodajSzeregowo(R0)
     }
+
+    operator fun div(R0: ObwodRezystory):Rezystor{
+        return dodajRownolegle(R0)
+    }
 }
 
 class ObwodSzeregowy: ObwodRezystory{

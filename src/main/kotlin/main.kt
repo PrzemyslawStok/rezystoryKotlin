@@ -24,6 +24,7 @@ fun main() {
 
     val R2 = R1.dodajSzeregowo(Rezystor(10.0))
     val R3 = R1-R2-R1-R2-R1
+    var R5 = R1/R2
 
     R1.print()
     R2.print()
