@@ -37,6 +37,9 @@ fun main() {
 
 fun zad1(){
     val R = Rezystor(1.0)
+
+    val obwod2 = R/R
+    val obwod1 = R/R/R/R
 }
 
 fun staryObwod(){
