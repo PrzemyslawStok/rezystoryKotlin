@@ -31,15 +31,25 @@ fun main() {
     R2.print()
     R3.print()
 
-    println("Zadanie 1")
+    println("Rozwiązania zadań:\n")
     zad1()
+    zad2()
 }
 
 fun zad1(){
+    println("Zadanie 1")
     val R = Rezystor(1.0)
 
     val obwod2 = R/R
     val obwod1 = R/R/R/R
+    val obwod0 = R/R/R/R/R/R
+
+    val opor = (R/R/R/R/R/R)-(R/R/R/R)-(R/R)
+    opor.print()
+}
+
+fun zad2(){
+    println("Zadanie 2")
 }
 
 fun staryObwod(){
