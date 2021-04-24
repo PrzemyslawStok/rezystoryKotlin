@@ -50,6 +50,10 @@ fun zad1(){
 
 fun zad2(){
     println("Zadanie 2")
+    val R = Rezystor(1.0)
+    val opor = (R/R)-R-(R/R/R)
+
+    opor.print()
 }
 
 fun staryObwod(){
