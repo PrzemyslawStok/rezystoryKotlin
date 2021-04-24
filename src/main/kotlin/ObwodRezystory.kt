@@ -21,10 +21,13 @@ class Rezystor(val opor: Double) : ObwodRezystory {
         return Rezystor(obwod.oblicz())
     }
 
-    operator fun minus(R0: ObwodRezystory):ObwodRezystory{
-        return dodajSzeregowo(R0)
+    fun dodajRownolegle(R0: ObwodRezystory):Rezystor{
+        TODO("Funkcja nie została zaimpementowana")
     }
 
+    operator fun minus(R0: ObwodRezystory):Rezystor{
+        return dodajSzeregowo(R0)
+    }
 }
 
 class ObwodSzeregowy: ObwodRezystory{

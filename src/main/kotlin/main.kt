@@ -23,7 +23,7 @@ fun main() {
     obwodS1.print()
 
     val R2 = R1.dodajSzeregowo(Rezystor(10.0))
-    val R3 = R2-R1
+    val R3 = R1-R2-R1-R2-R1
 
     R1.print()
     R2.print()
