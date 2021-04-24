@@ -1,8 +1,4 @@
 interface ObwodRezystory {
-    enum class Typ {
-        SZEREGOWY, ROWNOLEGLY
-    }
-
     fun oblicz(): Double
     fun print()
 }
@@ -29,45 +25,6 @@ class Rezystor(val opor: Double) : ObwodRezystory {
         return dodajSzeregowo(R0)
     }
 
-}
-
-class ObwodOgolny(val typ: ObwodRezystory.Typ) : ObwodRezystory {
-    val obwody: MutableList<ObwodRezystory> = mutableListOf()
-
-    override fun oblicz(): Double {
-        val opor = when (typ) {
-            ObwodRezystory.Typ.SZEREGOWY -> obliczSzeregowy()
-            ObwodRezystory.Typ.ROWNOLEGLY -> obliczRownolegly()
-        }
-        return opor
-    }
-
-    override fun print() {
-        println("obwód: ${typ.name}")
-        println("opór zastępczy: ${oblicz()}")
-    }
-
-    fun dodajObwod(obwod: ObwodRezystory) {
-        obwody.add(obwod)
-    }
-
-    fun obliczSzeregowy(): Double {
-        var sumaOporow = 0.0
-
-        for (obwod in obwody)
-            sumaOporow += obwod.oblicz()
-
-        return sumaOporow
-    }
-
-    fun obliczRownolegly(): Double {
-        var sumaOdwrotnosci = 0.0
-
-        for (obwod in obwody)
-            sumaOdwrotnosci += 1.0 / obwod.oblicz()
-
-        return 1 / sumaOdwrotnosci
-    }
 }
 
 class ObwodSzeregowy: ObwodRezystory{
